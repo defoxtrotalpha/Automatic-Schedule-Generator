@@ -1,0 +1,37 @@
+[Installer]
+Name=AutomaticScheduleGenerator
+Version=1.0.0
+License=MIT
+Uninstallable=True
+Include_python=False  ; Set to True if you want to bundle Python
+Icon=path/to/your/icon.ico  ; Path to your icon file
+
+[Python]
+Version=3.10.4  ; Specify the Python version to use
+Bitness=64  ; or 32 based on your application
+
+[Include]
+# Include the main application file
+Files=Automate_Schedule.py
+# Include any dependencies, e.g., libraries you installed via pip
+Files=holidays.py
+Files=gradio.py
+Files=pandas.py
+Files=openpyxl.py
+
+# Include additional resources if needed
+Files=schedule_data.json  ; If you want to include a default data file
+Files=path/to/your/icon.ico  ; Icon for the application
+
+[Shortcut]
+Name=Automatic Schedule Generator
+Target=python.exe
+Arguments=Automate_Schedule.py
+WorkingDirectory=.
+
+[DesktopShortcut]
+Name=Automatic Schedule Generator
+Target=python.exe
+Arguments=Automate_Schedule.py
+WorkingDirectory=.
+Icon=path/to/your/icon.ico
